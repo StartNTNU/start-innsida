@@ -1,0 +1,26 @@
+<div>
+    {{#if empty}}
+        <div class="empty-search">
+            Ingen treff =(
+        </div>
+    {{else}}
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th data-js-sort-name>Navn</th>
+                    <th data-js-sort-mail>Mail</th>
+                    <th data-js-sort-sex>Kjønn</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each users}}
+                    <tr data-js-user-id="{{id}}">
+                        <td>{{name}}</td>
+                        <td>{{mail}}</td>
+                        <td>{{sex}}</td>
+                    </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    {{/if}}
+</div>
