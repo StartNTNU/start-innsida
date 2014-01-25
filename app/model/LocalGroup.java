@@ -1,29 +1,39 @@
 package model;
 
 import play.data.validation.Constraints;
-import play.db.ebean.Model;
+import play.db.ebean.*;
 
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
+
+@Entity
 public class LocalGroup extends Model{
 
+    @Constraints.Required
     private String name;
 
-    @Constraints.Required
+    @Id
     private String id;
 
-    public String getName() {
-        return name;
+    public static Finder<String,LocalGroup> find = new Finder(
+            String.class, LocalGroup.class
+    );
+
+    public static List<LocalGroup> all(){
+        return new ArrayList<LocalGroup>();
     }
 
-    public void setName(String name) {
-
-        this.name = name;
+    public static void create(LocalGroup localGroup){
+       localGroup.save();
     }
 
-    public String getId() {
-        return id;
+    public static void update(LocalGroup localGroup){
+        find.ref(localGroup.id).update();
     }
 
-    private void setId(String id) {
-        this.id = id;
+    public static void delete(LocalGroup localGroup){
+        find.ref(localGroup.id).delete();
+
     }
 }
