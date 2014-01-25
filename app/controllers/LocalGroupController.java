@@ -1,8 +1,9 @@
 package controllers;
 
-import play.mvc.*;
+import play.mvc.Controller;
+import play.mvc.Result;
 
-public class LocalGroup extends Controller {
+public class LocalGroupController extends Controller {
 
     /*
         returns all local groups
@@ -15,7 +16,7 @@ public class LocalGroup extends Controller {
         return the local group with the given parameter
      */
     public static Result getLocalGroup(String id){
-        return ok("hello").as("application/json");
+        return ok("hello");
     }
 
     /*

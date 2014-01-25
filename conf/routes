@@ -7,8 +7,8 @@ GET     /                           controllers.Application.index()
 
 
 # Local Group
-GET /localgroup   controllers.LocalGroup.getAll()
-GET /localgroup/:id controllers.LocalGroup.getLocalGroup(id)
+GET /localgroup   controllers.LocalGroupController.getAll()
+GET /localgroup/:id controllers.LocalGroupController.getLocalGroup(id)
 
 
 
