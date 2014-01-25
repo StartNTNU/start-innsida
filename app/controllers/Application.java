@@ -2,13 +2,16 @@ package controllers;
 
 import play.*;
 import play.mvc.*;
+import views.html.index;
 
-import views.html.*;
 
 public class Application extends Controller {
-
+    /**
+     * Will return the index.html web application
+     * @return
+     */
     public static Result index() {
-        return ok(index.render("Your new application is ready."));
+        return ok(index.render());
     }
 
 }
