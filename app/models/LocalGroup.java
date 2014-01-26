@@ -37,7 +37,7 @@ public class LocalGroup extends Model{
     );
 
     public static List<LocalGroup> all(){
-        return new ArrayList<>();
+        return new ArrayList<LocalGroup>();
     }
 
     public static LocalGroup findOne(String name){

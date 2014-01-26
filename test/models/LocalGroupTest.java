@@ -33,7 +33,7 @@ public class LocalGroupTest extends WithApplication{
         assertNotNull(start);
         assertEquals("startntnu", start.getId());
         assertEquals("Start NTNU", start.getName());
-        assertNotEquals("Start NTNU", start.getId());
+        assertNotEquals("Start NT   NU", start.getId());
         assertEquals(LocalGroup.find.findList().size(), 1);
 
         new LocalGroup("Start NTNU").save();
