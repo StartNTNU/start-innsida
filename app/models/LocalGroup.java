@@ -11,6 +11,7 @@ import java.util.List;
 public class LocalGroup extends Model{
 
     @Constraints.Required
+    @Column(unique=true)
     private String name;
 
     @Id
@@ -42,7 +43,7 @@ public class LocalGroup extends Model{
     }
 
     public static void create(LocalGroup localGroup){
-       localGroup.save();
+        localGroup.save();
     }
 
     public static void update(LocalGroup localGroup){
