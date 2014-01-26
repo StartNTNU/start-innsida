@@ -32,6 +32,7 @@ public class LocalGroupTest extends WithApplication{
         LocalGroup start = LocalGroup.find.where().eq("name", "Start NTNU").findUnique();
         assertNotNull(start);
         assertEquals("startntnu", start.getId());
+        assertEquals("Start NTNU", start.getName());
         assertNotEquals("Start NTNU", start.getId());
         assertEquals(LocalGroup.find.findList().size(), 1);
 
@@ -39,14 +40,17 @@ public class LocalGroupTest extends WithApplication{
         assertEquals(LocalGroup.find.findList().size(), 1);
 
         new LocalGroup("Start Norge").save();
-        assertEquals(LocalGroup.find.findList().size(),2);
+        assertEquals(LocalGroup.find.findList().size(), 2);
+
+        new LocalGroup(null).save();
+        assertEquals(LocalGroup.find.findList().size(), 2);
+
 
 
     }
 
     @Test
     public void testUpdate() throws Exception {
-
     }
 
     @Test

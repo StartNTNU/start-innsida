@@ -4,6 +4,7 @@ import play.data.validation.Constraints;
 import play.db.ebean.*;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,6 +13,7 @@ public class LocalGroup extends Model{
 
     @Constraints.Required
     @Column(unique=true)
+    @NotNull
     private String name;
 
     @Id
