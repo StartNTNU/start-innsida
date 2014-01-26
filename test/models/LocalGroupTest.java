@@ -1,4 +1,4 @@
-package model;
+package models;
 
 import models.LocalGroup;
 import org.junit.Before;
@@ -46,6 +46,11 @@ public class LocalGroupTest extends WithApplication{
         assertEquals(LocalGroup.find.findList().size(), 2);
 
 
+
+    }
+
+    @Test
+    public void testFindOne() throws Exception{
 
     }
 
