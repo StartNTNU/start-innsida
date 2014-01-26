@@ -50,10 +50,6 @@ public class LocalGroupTest extends WithApplication{
     }
 
     @Test
-    public void testUpdate() throws Exception {
-    }
-
-    @Test
     public void testDelete() throws Exception {
 
     }

@@ -48,10 +48,6 @@ public class LocalGroup extends Model{
         localGroup.save();
     }
 
-    public static void update(LocalGroup localGroup){
-        find.ref(localGroup.id).update();
-    }
-
     public static void delete(LocalGroup localGroup){
         find.ref(localGroup.id).delete();
 
